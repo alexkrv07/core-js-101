@@ -149,8 +149,14 @@ function removeFirstOccurrences(str, value) {
  *   '<span>' => 'span'
  *   '<a>' => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  const firstIndex = str.indexOf('<');
+  const lastIndex = str.lastIndexOf('>');
+
+  return str.substring(0, firstIndex) + str.substring(firstIndex + 1, lastIndex)
+   + str.substring(lastIndex + 1);
+
+  // throw new Error('Not implemented');
 }
 
 
@@ -279,8 +285,11 @@ function encodeToRot13(/* str */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  if (typeof value === 'string' || value instanceof String) {
+    return true;
+  }
+  return false;
 }
 
 
