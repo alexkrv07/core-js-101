@@ -315,6 +315,19 @@ function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 function getPositivesCount(/* arr */) {
+  // return arr.reduce(function(accumulator, currentValue) {
+  //   return accumulator + currentValue;
+  // }, 10);
+  // let result = 0;
+  // return arr.reduce((acc, element) => {
+  //   if (element > 0) {
+  //     const result = acc + 1;
+  //     return result;
+  //   }
+  //   const result = acc;
+  //   return result;
+  // }, 0);
+  // return result;
   throw new Error('Not implemented');
 }
 
@@ -347,8 +360,12 @@ function sortDigitNamesByNumericOrder(/* arr */) {
  *   [ -1, 1, -1, 1 ]      => 0
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
-function getItemsSum(/* arr */) {
-  throw new Error('Not implemented');
+function getItemsSum(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+  return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
+  // throw new Error('Not implemented');
 }
 
 /**
