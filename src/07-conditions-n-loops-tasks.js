@@ -178,6 +178,12 @@ function isInsideCircle(/* circle, point */) {
  *   'entente' => null
  */
 function findFirstSingleChar(/* str */) {
+  // const letters = str.split('').map((letter) => letter.toLowerCase());
+  // const filterLetter = str.split('').filter((letter) => !letters.includes(letter.toLowerCase()));
+  // if (filterLetter.length) {
+  //   return filterLetter[0];
+  // }
+  // return null;
   throw new Error('Not implemented');
 }
 
